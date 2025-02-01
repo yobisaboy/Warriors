@@ -36,11 +36,6 @@ by Yiu Yiu Yoyo Ho
 2. **Using GUI:**
    - Double-click the `program.exe` file to launch the application.
 
-### Note
-- If the grid is too small to accommodate all the warriors, you will need to restart the program. 
-- Make sure the grid is sufficiently large (`(gridSize + 1)^2 > 4 * number of each type of warriors`) to fit all warriors. 
-- If you encounter this issue, the program will notify you, and you should restart the program.
-
 ## Example Usage
 ```bash
 
