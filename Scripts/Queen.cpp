@@ -101,9 +101,11 @@ void Queen::move()
     }
     int option = 1;
     set<pair<int, int>> optionMoves;
+
+    cout << "Queen" << " at (" << ogX << ", " << ogY << ") is moving." << endl;
+
     for (const auto &pos : availableMoves)
     {
-
         int sqX = (ogX - pos[0]) * (ogX - pos[0]);
         int sqY = (ogY - pos[1]) * (ogY - pos[1]);
         if (sqX + sqY == 4)
@@ -116,7 +118,6 @@ void Queen::move()
 
     if (optionMoves.size() > 0)
     {
-        cout << "Queen" << " at (" << ogX << ", " << ogY << ") is moving." << endl;
         int selectedMove;
         cout << "Pick your move: ";
         cin >> selectedMove;

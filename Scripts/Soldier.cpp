@@ -101,11 +101,13 @@ void Soldier::move()
             availableMoves.push_back({pos.first, pos.second});
         }
     }
+
+    cout << "Soldier " << getId() << " at (" << ogX << ", " << ogY << ") is moving." << endl;
+
     int option = 1;
     set<pair<int, int>> optionMoves;
     for (const auto &pos : availableMoves)
     {
-
         int sqX = (ogX - pos[0]) * (ogX - pos[0]);
         int sqY = (ogY - pos[1]) * (ogY - pos[1]);
         if (sqX + sqY == 1 || sqX + sqY == 2)
@@ -117,7 +119,6 @@ void Soldier::move()
     }
     if (optionMoves.size() > 0)
     {
-        cout << "Soldier " << getId() << " at (" << ogX << ", " << ogY << ") is moving." << endl;
         int selectedMove;
         cout << "Pick your move: ";
         cin >> selectedMove;
